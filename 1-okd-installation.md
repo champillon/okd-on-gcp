@@ -46,4 +46,13 @@ $> sudo yum install -y epel-release
 ```
 $> sudo yum install -y ansible
 ```
-14. 
+14. clone project for "openshift-ansible"
+```
+$> git clone https://github.com/openshift/openshift-ansible.git
+$> cd openshift-ansible
+$> git checkout release-3.11
+```
+15. get inventory config file
+```
+$> wget https://raw.githubusercontent.com/techmogun/okd-3.11-origin/master/inventory_wildcard_external
+```
