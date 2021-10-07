@@ -61,5 +61,5 @@ $> wget https://raw.githubusercontent.com/techmogun/okd-3.11-origin/master/inven
 "master.techmogun.local" to "okd"
 "apps.master.192.168.10.5.xip.io" to "okd.passapong.dev"
 ```
-17. set cloud dns to point at "okd" to "okd.passapong.dev"
+17. set cloud dns to point at "okd" ip to subdomain "okd.passapong.dev"
 18. 
