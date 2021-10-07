@@ -67,3 +67,12 @@ $> wget https://raw.githubusercontent.com/techmogun/okd-3.11-origin/master/inven
 ```
 $> sudo ansible-playbook -i inventory_wildcard_external playbooks/prerequisites.yml
 ```
+19. run installation
+```
+$> sudo ansible-playbook -i inventory_wildcard_external playbooks/deploy_cluster.yml
+```
+20. change password to ocadmin
+```
+$> sudo htpasswd -b /etc/origin/master/htpasswd ocpadmin welcome1
+$> sudo oc adm policy add-cluster-role-to-user cluster-admin ocpadmin
+```
