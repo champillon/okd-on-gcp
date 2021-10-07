@@ -12,19 +12,20 @@ $> sudo vi /etc/ssh/sshd_config
 4. change "PubkeyAuthentication" to "yes"
 ```
 set "PubkeyAuthentication" to "yes"
+set "PermitRootLogin" to "yes"
 ```
 5. restart sshd
 ```
 $> sudo systemctl restart sshd
 ```
 6. try to shell from local notebook to verify configuration
-7. on okd machine, generate public key for connected user
+7. on okd machine, generate public key for root
 ```
 $> ssh-keygen -t rsa
 ```
 8. copy generated public key to google metadata
 ```
-/home/champillon/.ssh/id_rsa.pub
+/root/.ssh/id_rsa.pub
 ```
 9. update software package
 ```
