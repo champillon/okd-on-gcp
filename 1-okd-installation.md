@@ -76,3 +76,12 @@ $> sudo ansible-playbook -i inventory_wildcard_external playbooks/deploy_cluster
 $> sudo htpasswd -b /etc/origin/master/htpasswd ocpadmin welcome1
 $> sudo oc adm policy add-cluster-role-to-user cluster-admin ocpadmin
 ```
+21. set okd vm to open 8443 port on google cloud firewall
+22. access the admin console with ignore trusted cert. by open chrome in ignore-certificate-error
+```
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-error
+```
+23. access the admin url
+```
+https://okd.passapong.dev:8443/console/
+```
