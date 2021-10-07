@@ -26,3 +26,24 @@ $> ssh-keygen -t rsa
 ```
 /home/champillon/.ssh/id_rsa.pub
 ```
+9. update software package
+```
+$> sudo yum -y update
+```
+10. install following components
+```
+$> sudo yum install -y wget git perl net-tools docker-1.13.1 bind-utils iptables-services bridge-utils openssl-devel bash-completion kexec-tools sos psacct python-cryptography python2-pip python-devel python-passlib java-1.8.0-openjdk-headless "@Development Tools"
+```
+11. install following components
+```
+$> sudo yum -y install python-passlib httpd-tools
+```
+12. install following components
+```
+$> sudo yum install -y epel-release
+```
+13. install following components
+```
+$> yum install -y ansible
+```
+14. 
