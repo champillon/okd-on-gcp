@@ -18,3 +18,11 @@ set "PubkeyAuthentication" to "yes"
 $> sudo systemctl restart sshd
 ```
 6. try to shell from local notebook to verify configuration
+7. on okd machine, generate public key for connected user
+```
+$> ssh-keygen -t rsa
+```
+8. copy generated public key to google metadata
+```
+/home/champillon/.ssh/id_rsa.pub
+```
