@@ -7,7 +7,7 @@
 2. shell to instance
 3. edit "/etc/ssh/sshd_config"
 ```
-$> vi /etc/ssh/sshd_config
+$> sudo vi /etc/ssh/sshd_config
 ```
 4. change "PubkeyAuthentication" to "yes"
 ```
@@ -17,3 +17,4 @@ set "PubkeyAuthentication" to "yes"
 ```
 $> sudo systemctl restart sshd
 ```
+6. try to shell from local notebook to verify configuration
