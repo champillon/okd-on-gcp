@@ -44,6 +44,6 @@ $> sudo yum install -y epel-release
 ```
 13. install following components
 ```
-$> yum install -y ansible
+$> sudo yum install -y ansible
 ```
 14. 
