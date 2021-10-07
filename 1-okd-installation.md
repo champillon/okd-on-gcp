@@ -62,4 +62,7 @@ $> wget https://raw.githubusercontent.com/techmogun/okd-3.11-origin/master/inven
 "apps.master.192.168.10.5.xip.io" to "okd.passapong.dev"
 ```
 17. set cloud dns to point at "okd" ip to subdomain "okd.passapong.dev"
-18. 
+18. run prerequisite test
+```
+$> sudo ansible-playbook -i inventory_wildcard_external playbooks/prerequisites.yml
+```
