@@ -60,28 +60,34 @@ $> wget https://raw.githubusercontent.com/techmogun/okd-3.11-origin/master/inven
 16. replace the following content in "inventory_wildcard_external"
 ```
 "master.techmogun.local" to "okd"
-"apps.master.192.168.10.5.xip.io" to "okd.passapong.dev"
+"apps.master.192.168.10.5.xip.io" to "apps.passapong.dev"
 ```
-17. set cloud dns to point at "okd" ip to subdomain "okd.passapong.dev"
-18. run prerequisite test
+17. add the following config to "inventory_wildcard_external"
+```
+openshift_public_hostname=okd.passapong.dev
+openshift_master_api_port=8443
+openshift_master_console_port=8443
+```
+18. set cloud dns to point at "okd" ip to subdomain "okd.passapong.dev"
+19. run prerequisite test
 ```
 $> sudo ansible-playbook -i inventory_wildcard_external playbooks/prerequisites.yml
 ```
-19. run installation
+20. run installation
 ```
 $> sudo ansible-playbook -i inventory_wildcard_external playbooks/deploy_cluster.yml
 ```
-20. change password to ocadmin
+21. change password to ocadmin
 ```
 $> sudo htpasswd -b /etc/origin/master/htpasswd ocpadmin welcome1
 $> sudo oc adm policy add-cluster-role-to-user cluster-admin ocpadmin
 ```
-21. set okd vm to open 8443 port on google cloud firewall
-22. access the admin console with ignore trusted cert. by open chrome in ignore-certificate-error
+22. set okd vm to open 8443 port on google cloud firewall
+23. access the admin console with ignore trusted cert. by open chrome in ignore-certificate-error
 ```
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors
 ```
-23. access the admin url
+24. access the admin url
 ```
 https://okd.passapong.dev:8443/console/
 ```
