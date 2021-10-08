@@ -79,7 +79,7 @@ $> sudo oc adm policy add-cluster-role-to-user cluster-admin ocpadmin
 21. set okd vm to open 8443 port on google cloud firewall
 22. access the admin console with ignore trusted cert. by open chrome in ignore-certificate-error
 ```
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-error
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --ignore-certificate-errors
 ```
 23. access the admin url
 ```
